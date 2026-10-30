@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自分と技術の歩み | otajisan</title>
+  <meta name="description" content="作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
+  <meta property="og:title" content="自分と技術の歩み | otajisan">
+  <meta property="og:description" content="作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://otajisan.github.io/history/">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // 保存されたテーマを、描画の前に反映する（ちらつき防止）
+    (function () {
+      var t = localStorage.getItem("history-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      document.documentElement.classList.add("js");
+      // main.js が読み込めなかったときは、フェードインをやめて本文を見せる
+      setTimeout(function () {
+        if (!window.__historyReady) document.documentElement.classList.remove("js");
+      }, 3000);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#chapters">本文へスキップ</a>
+  <header class="topbar">
+    <a class="topbar__home" href="https://github.com/otajisan" target="_blank" rel="noopener"><span class="prompt">~/</span>otajisan</a>
+    <button class="theme-toggle" type="button" aria-label="ライト / ダークを切り替える"><span aria-hidden="true">◐</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <p class="hero__eyebrow"><code><span class="prompt">$</span> git log --reverse <span class="caret" aria-hidden="true"></span></code></p>
+      <h1 class="hero__title">自分と技術の歩み</h1>
+      <p class="hero__lead">作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。</p>
+      <ul class="stats"><li class="stat"><span class="stat__num">14<small>年</small></span><span class="stat__note">2013 年から 2026 年まで</span></li><li class="stat"><span class="stat__num">173<small>リポジトリ</small></span><span class="stat__note">GitHub に残してきたもの</span></li><li class="stat"><span class="stat__num">21<small>言語</small></span><span class="stat__note">書いてきたプログラミング言語</span></li><li class="stat"><span class="stat__num">2,404<small>コミット</small></span><span class="stat__note">掲載したリポジトリの合計</span></li></ul>
+      <div class="langs">
+        <span class="langs__label">よく使ってきた言語</span>
+        <ul><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Kotlin</li><li>Ruby</li><li>PHP</li><li>Go</li><li>Scala</li><li>Java</li><li>C++</li></ul>
+      </div>
+    </section>
+
+    <section class="overview reveal" aria-labelledby="overview-title">
+      <h2 class="section-title" id="overview-title"><span class="section-title__no">00</span>関心の移り変わり</h2>
+      <p class="section-lead">その年に作り始めたリポジトリを技術領域ごとに数えたものです。色が濃いほど、その領域に多く取り組んでいます。</p>
+      <figure class="heat-figure">
+        <div class="heat-scroll"><svg class="heat" viewBox="0 0 686 361" role="img" aria-labelledby="heat-title heat-desc">
+<title id="heat-title">技術領域ごとのリポジトリ数の推移</title>
+<desc id="heat-desc">縦に技術領域、横に年をとり、その年に作り始めたリポジトリのうち、その領域に関わるものの数を色の濃さで表す。数値は下の表でも確認できる。</desc>
+<text class="heat__year" x="185.0" y="18" text-anchor="middle">2013</text>
+<text class="heat__year" x="222.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="259.0" y="18" text-anchor="middle">2015</text>
+<text class="heat__year" x="296.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="333.0" y="18" text-anchor="middle">2017</text>
+<text class="heat__year" x="370.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="407.0" y="18" text-anchor="middle">2019</text>
+<text class="heat__year" x="444.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="481.0" y="18" text-anchor="middle">2021</text>
+<text class="heat__year" x="518.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="555.0" y="18" text-anchor="middle">2023</text>
+<text class="heat__year" x="592.0" y="18" text-anchor="middle"></text>
+<text class="heat__year" x="629.0" y="18" text-anchor="middle">2025</text>
+<text class="heat__year" x="666.0" y="18" text-anchor="middle">2026</text>
+<text class="heat__label" x="156" y="49.0" text-anchor="end">モバイル・フロントエンド</text>
+<rect class="heat__cell q0" x="168" y="28" width="34" height="34" rx="4" data-tip="2013 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q1" x="205" y="28" width="34" height="34" rx="4" data-tip="2014 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q3" x="242" y="28" width="34" height="34" rx="4" data-tip="2015 年 · モバイル・フロントエンド：4 件"></rect>
+<rect class="heat__cell q1" x="279" y="28" width="34" height="34" rx="4" data-tip="2016 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q0" x="316" y="28" width="34" height="34" rx="4" data-tip="2017 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="28" width="34" height="34" rx="4" data-tip="2018 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="28" width="34" height="34" rx="4" data-tip="2019 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q1" x="427" y="28" width="34" height="34" rx="4" data-tip="2020 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q1" x="464" y="28" width="34" height="34" rx="4" data-tip="2021 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="28" width="34" height="34" rx="4" data-tip="2022 年 · モバイル・フロントエンド：4 件"></rect>
+<rect class="heat__cell q0" x="538" y="28" width="34" height="34" rx="4" data-tip="2023 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="28" width="34" height="34" rx="4" data-tip="2024 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q2" x="612" y="28" width="34" height="34" rx="4" data-tip="2025 年 · モバイル・フロントエンド：2 件"></rect>
+<rect class="heat__cell q0" x="649" y="28" width="34" height="34" rx="4" data-tip="2026 年 · モバイル・フロントエンド：0 件"></rect>
+<text class="heat__label" x="156" y="86.0" text-anchor="end">サーバーサイド</text>
+<rect class="heat__cell q0" x="168" y="65" width="34" height="34" rx="4" data-tip="2013 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="65" width="34" height="34" rx="4" data-tip="2014 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="65" width="34" height="34" rx="4" data-tip="2015 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="65" width="34" height="34" rx="4" data-tip="2016 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="65" width="34" height="34" rx="4" data-tip="2017 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="65" width="34" height="34" rx="4" data-tip="2018 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q2" x="390" y="65" width="34" height="34" rx="4" data-tip="2019 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q5" x="427" y="65" width="34" height="34" rx="4" data-tip="2020 年 · サーバーサイド：9 件"></rect>
+<rect class="heat__cell q0" x="464" y="65" width="34" height="34" rx="4" data-tip="2021 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q2" x="501" y="65" width="34" height="34" rx="4" data-tip="2022 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q2" x="538" y="65" width="34" height="34" rx="4" data-tip="2023 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q3" x="575" y="65" width="34" height="34" rx="4" data-tip="2024 年 · サーバーサイド：3 件"></rect>
+<rect class="heat__cell q3" x="612" y="65" width="34" height="34" rx="4" data-tip="2025 年 · サーバーサイド：3 件"></rect>
+<rect class="heat__cell q1" x="649" y="65" width="34" height="34" rx="4" data-tip="2026 年 · サーバーサイド：1 件"></rect>
+<text class="heat__label" x="156" y="123.0" text-anchor="end">クラウド・インフラ</text>
+<rect class="heat__cell q0" x="168" y="102" width="34" height="34" rx="4" data-tip="2013 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="102" width="34" height="34" rx="4" data-tip="2014 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="102" width="34" height="34" rx="4" data-tip="2015 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="102" width="34" height="34" rx="4" data-tip="2016 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="102" width="34" height="34" rx="4" data-tip="2017 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q1" x="353" y="102" width="34" height="34" rx="4" data-tip="2018 年 · クラウド・インフラ：1 件"></rect>
+<rect class="heat__cell q4" x="390" y="102" width="34" height="34" rx="4" data-tip="2019 年 · クラウド・インフラ：7 件"></rect>
+<rect class="heat__cell q5" x="427" y="102" width="34" height="34" rx="4" data-tip="2020 年 · クラウド・インフラ：28 件"></rect>
+<rect class="heat__cell q5" x="464" y="102" width="34" height="34" rx="4" data-tip="2021 年 · クラウド・インフラ：8 件"></rect>
+<rect class="heat__cell q5" x="501" y="102" width="34" height="34" rx="4" data-tip="2022 年 · クラウド・インフラ：12 件"></rect>
+<rect class="heat__cell q3" x="538" y="102" width="34" height="34" rx="4" data-tip="2023 年 · クラウド・インフラ：3 件"></rect>
+<rect class="heat__cell q3" x="575" y="102" width="34" height="34" rx="4" data-tip="2024 年 · クラウド・インフラ：3 件"></rect>
+<rect class="heat__cell q1" x="612" y="102" width="34" height="34" rx="4" data-tip="2025 年 · クラウド・インフラ：1 件"></rect>
+<rect class="heat__cell q1" x="649" y="102" width="34" height="34" rx="4" data-tip="2026 年 · クラウド・インフラ：1 件"></rect>
+<text class="heat__label" x="156" y="160.0" text-anchor="end">データ・検索</text>
+<rect class="heat__cell q0" x="168" y="139" width="34" height="34" rx="4" data-tip="2013 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="139" width="34" height="34" rx="4" data-tip="2014 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="139" width="34" height="34" rx="4" data-tip="2015 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q2" x="279" y="139" width="34" height="34" rx="4" data-tip="2016 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q2" x="316" y="139" width="34" height="34" rx="4" data-tip="2017 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q0" x="353" y="139" width="34" height="34" rx="4" data-tip="2018 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q2" x="390" y="139" width="34" height="34" rx="4" data-tip="2019 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q5" x="427" y="139" width="34" height="34" rx="4" data-tip="2020 年 · データ・検索：9 件"></rect>
+<rect class="heat__cell q3" x="464" y="139" width="34" height="34" rx="4" data-tip="2021 年 · データ・検索：4 件"></rect>
+<rect class="heat__cell q3" x="501" y="139" width="34" height="34" rx="4" data-tip="2022 年 · データ・検索：4 件"></rect>
+<rect class="heat__cell q1" x="538" y="139" width="34" height="34" rx="4" data-tip="2023 年 · データ・検索：1 件"></rect>
+<rect class="heat__cell q3" x="575" y="139" width="34" height="34" rx="4" data-tip="2024 年 · データ・検索：3 件"></rect>
+<rect class="heat__cell q1" x="612" y="139" width="34" height="34" rx="4" data-tip="2025 年 · データ・検索：1 件"></rect>
+<rect class="heat__cell q0" x="649" y="139" width="34" height="34" rx="4" data-tip="2026 年 · データ・検索：0 件"></rect>
+<text class="heat__label" x="156" y="197.0" text-anchor="end">セキュリティ・認証</text>
+<rect class="heat__cell q0" x="168" y="176" width="34" height="34" rx="4" data-tip="2013 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="176" width="34" height="34" rx="4" data-tip="2014 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="176" width="34" height="34" rx="4" data-tip="2015 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="176" width="34" height="34" rx="4" data-tip="2016 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="176" width="34" height="34" rx="4" data-tip="2017 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="176" width="34" height="34" rx="4" data-tip="2018 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="176" width="34" height="34" rx="4" data-tip="2019 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q5" x="427" y="176" width="34" height="34" rx="4" data-tip="2020 年 · セキュリティ・認証：8 件"></rect>
+<rect class="heat__cell q1" x="464" y="176" width="34" height="34" rx="4" data-tip="2021 年 · セキュリティ・認証：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="176" width="34" height="34" rx="4" data-tip="2022 年 · セキュリティ・認証：3 件"></rect>
+<rect class="heat__cell q0" x="538" y="176" width="34" height="34" rx="4" data-tip="2023 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="176" width="34" height="34" rx="4" data-tip="2024 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="176" width="34" height="34" rx="4" data-tip="2025 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="176" width="34" height="34" rx="4" data-tip="2026 年 · セキュリティ・認証：0 件"></rect>
+<text class="heat__label" x="156" y="234.0" text-anchor="end">テスト・自動化</text>
+<rect class="heat__cell q0" x="168" y="213" width="34" height="34" rx="4" data-tip="2013 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="213" width="34" height="34" rx="4" data-tip="2014 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q1" x="242" y="213" width="34" height="34" rx="4" data-tip="2015 年 · テスト・自動化：1 件"></rect>
+<rect class="heat__cell q2" x="279" y="213" width="34" height="34" rx="4" data-tip="2016 年 · テスト・自動化：2 件"></rect>
+<rect class="heat__cell q0" x="316" y="213" width="34" height="34" rx="4" data-tip="2017 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q3" x="353" y="213" width="34" height="34" rx="4" data-tip="2018 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q3" x="390" y="213" width="34" height="34" rx="4" data-tip="2019 年 · テスト・自動化：4 件"></rect>
+<rect class="heat__cell q4" x="427" y="213" width="34" height="34" rx="4" data-tip="2020 年 · テスト・自動化：5 件"></rect>
+<rect class="heat__cell q3" x="464" y="213" width="34" height="34" rx="4" data-tip="2021 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q4" x="501" y="213" width="34" height="34" rx="4" data-tip="2022 年 · テスト・自動化：7 件"></rect>
+<rect class="heat__cell q3" x="538" y="213" width="34" height="34" rx="4" data-tip="2023 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q2" x="575" y="213" width="34" height="34" rx="4" data-tip="2024 年 · テスト・自動化：2 件"></rect>
+<rect class="heat__cell q1" x="612" y="213" width="34" height="34" rx="4" data-tip="2025 年 · テスト・自動化：1 件"></rect>
+<rect class="heat__cell q3" x="649" y="213" width="34" height="34" rx="4" data-tip="2026 年 · テスト・自動化：4 件"></rect>
+<text class="heat__label" x="156" y="271.0" text-anchor="end">機械学習・生成 AI</text>
+<rect class="heat__cell q0" x="168" y="250" width="34" height="34" rx="4" data-tip="2013 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="250" width="34" height="34" rx="4" data-tip="2014 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="250" width="34" height="34" rx="4" data-tip="2015 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="250" width="34" height="34" rx="4" data-tip="2016 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q1" x="316" y="250" width="34" height="34" rx="4" data-tip="2017 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q0" x="353" y="250" width="34" height="34" rx="4" data-tip="2018 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q1" x="390" y="250" width="34" height="34" rx="4" data-tip="2019 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q1" x="427" y="250" width="34" height="34" rx="4" data-tip="2020 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q0" x="464" y="250" width="34" height="34" rx="4" data-tip="2021 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q2" x="501" y="250" width="34" height="34" rx="4" data-tip="2022 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q2" x="538" y="250" width="34" height="34" rx="4" data-tip="2023 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q1" x="575" y="250" width="34" height="34" rx="4" data-tip="2024 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q2" x="612" y="250" width="34" height="34" rx="4" data-tip="2025 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q4" x="649" y="250" width="34" height="34" rx="4" data-tip="2026 年 · 機械学習・生成 AI：5 件"></rect>
+<text class="heat__label" x="156" y="308.0" text-anchor="end">IoT・ものづくり</text>
+<rect class="heat__cell q0" x="168" y="287" width="34" height="34" rx="4" data-tip="2013 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="287" width="34" height="34" rx="4" data-tip="2014 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q1" x="242" y="287" width="34" height="34" rx="4" data-tip="2015 年 · IoT・ものづくり：1 件"></rect>
+<rect class="heat__cell q0" x="279" y="287" width="34" height="34" rx="4" data-tip="2016 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="287" width="34" height="34" rx="4" data-tip="2017 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="287" width="34" height="34" rx="4" data-tip="2018 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="287" width="34" height="34" rx="4" data-tip="2019 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="427" y="287" width="34" height="34" rx="4" data-tip="2020 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q5" x="464" y="287" width="34" height="34" rx="4" data-tip="2021 年 · IoT・ものづくり：13 件"></rect>
+<rect class="heat__cell q2" x="501" y="287" width="34" height="34" rx="4" data-tip="2022 年 · IoT・ものづくり：2 件"></rect>
+<rect class="heat__cell q0" x="538" y="287" width="34" height="34" rx="4" data-tip="2023 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="287" width="34" height="34" rx="4" data-tip="2024 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="287" width="34" height="34" rx="4" data-tip="2025 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="287" width="34" height="34" rx="4" data-tip="2026 年 · IoT・ものづくり：0 件"></rect>
+<text class="heat__label" x="156" y="345.0" text-anchor="end">アジャイル・発信</text>
+<rect class="heat__cell q0" x="168" y="324" width="34" height="34" rx="4" data-tip="2013 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="324" width="34" height="34" rx="4" data-tip="2014 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="324" width="34" height="34" rx="4" data-tip="2015 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="324" width="34" height="34" rx="4" data-tip="2016 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="324" width="34" height="34" rx="4" data-tip="2017 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q1" x="353" y="324" width="34" height="34" rx="4" data-tip="2018 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q0" x="390" y="324" width="34" height="34" rx="4" data-tip="2019 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q1" x="427" y="324" width="34" height="34" rx="4" data-tip="2020 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q1" x="464" y="324" width="34" height="34" rx="4" data-tip="2021 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="324" width="34" height="34" rx="4" data-tip="2022 年 · アジャイル・発信：4 件"></rect>
+<rect class="heat__cell q0" x="538" y="324" width="34" height="34" rx="4" data-tip="2023 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="324" width="34" height="34" rx="4" data-tip="2024 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="324" width="34" height="34" rx="4" data-tip="2025 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="324" width="34" height="34" rx="4" data-tip="2026 年 · アジャイル・発信：0 件"></rect>
+</svg></div>
+        <figcaption>
+          <ul class="heat__legend" aria-label="凡例（リポジトリ数）"><li><span class="heat__swatch q0"></span>0</li><li><span class="heat__swatch q1"></span>1</li><li><span class="heat__swatch q2"></span>2</li><li><span class="heat__swatch q3"></span>3–4</li><li><span class="heat__swatch q4"></span>5–7</li><li><span class="heat__swatch q5"></span>8+</li></ul>
+        </figcaption>
+        <div class="tooltip" role="status" aria-live="polite" hidden></div>
+      </figure>
+      <details class="table-view">
+        <summary>表で見る</summary>
+        <div class="table-wrap"><table class="heat-table"><thead><tr><th scope="col">領域 \ 年</th><th scope="col">2013</th><th scope="col">2014</th><th scope="col">2015</th><th scope="col">2016</th><th scope="col">2017</th><th scope="col">2018</th><th scope="col">2019</th><th scope="col">2020</th><th scope="col">2021</th><th scope="col">2022</th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">2026</th></tr></thead><tbody><tr><th scope="row">モバイル・フロントエンド</th><td></td><td>1</td><td>4</td><td>1</td><td></td><td></td><td></td><td>1</td><td>1</td><td>4</td><td></td><td></td><td>2</td><td></td></tr><tr><th scope="row">サーバーサイド</th><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td><td>9</td><td></td><td>2</td><td>2</td><td>3</td><td>3</td><td>1</td></tr><tr><th scope="row">クラウド・インフラ</th><td></td><td></td><td></td><td></td><td></td><td>1</td><td>7</td><td>28</td><td>8</td><td>12</td><td>3</td><td>3</td><td>1</td><td>1</td></tr><tr><th scope="row">データ・検索</th><td></td><td></td><td></td><td>2</td><td>2</td><td></td><td>2</td><td>9</td><td>4</td><td>4</td><td>1</td><td>3</td><td>1</td><td></td></tr><tr><th scope="row">セキュリティ・認証</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>8</td><td>1</td><td>3</td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">テスト・自動化</th><td></td><td></td><td>1</td><td>2</td><td></td><td>3</td><td>4</td><td>5</td><td>3</td><td>7</td><td>3</td><td>2</td><td>1</td><td>4</td></tr><tr><th scope="row">機械学習・生成 AI</th><td></td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td>1</td><td></td><td>2</td><td>2</td><td>1</td><td>2</td><td>5</td></tr><tr><th scope="row">IoT・ものづくり</th><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>13</td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><th scope="row">アジャイル・発信</th><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td>1</td><td>4</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+      </details>
+      <nav class="toc" aria-label="章の目次">
+        <ol><li><a href="#origin" style="--accent:#f59f00"><span class="toc__period">2013 – 2015</span><span class="toc__title">作る楽しさを、手当たり次第に</span></a></li><li><a href="#data" style="--accent:#e8590c"><span class="toc__period">2016 – 2017</span><span class="toc__title">大量のデータを、分散処理でさばく</span></a></li><li><a href="#quality" style="--accent:#40c057"><span class="toc__period">2018</span><span class="toc__title">テストで設計し、仲間と学ぶ</span></a></li><li><a href="#service" style="--accent:#4c6ef5"><span class="toc__period">2019 – 2020</span><span class="toc__title">Kotlin × AWS で、サービスを丸ごと作る</span></a></li><li><a href="#security" style="--accent:#e03131"><span class="toc__period">2020</span><span class="toc__title">脆弱性を、仕組みで見つける</span></a></li><li><a href="#cloudnative" style="--accent:#15aabf"><span class="toc__period">2021 – 2022</span><span class="toc__title">クラウドネイティブを、深く</span></a></li><li><a href="#community" style="--accent:#be4bdb"><span class="toc__period">2021 – 2022</span><span class="toc__title">つくる楽しさを広げ、仲間と学ぶ</span></a></li><li><a href="#genai" style="--accent:#12b886"><span class="toc__period">2023 – 2024</span><span class="toc__title">生成 AI に触れ、土台を磨き直す</span></a></li><li><a href="#agents" style="--accent:#7950f2"><span class="toc__period">2025 – 2026</span><span class="toc__title">AI エージェントと、一緒に開発する</span></a></li></ol>
+      </nav>
+    </section>
+
+    <div class="timeline" id="chapters">
+      <section class="chapter reveal" id="origin" style="--accent:#f59f00" aria-labelledby="origin-title">
+        <div class="chapter__marker" aria-hidden="true"><span>01</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2013 – 2015</code></p>
+          <h2 class="chapter__title" id="origin-title">作る楽しさを、手当たり次第に</h2>
+          <div class="chapter__text"><p>最初のころは、とにかく「動くもの」を作ること自体が楽しくて、言語もプラットフォームも選ばずに手を出していました。PHP や Ruby でサンプルを書き、Objective-C と Swift で iOS のアプリを作り、Rails でアプリケーションの組み立て方を学ぶ。「リアルタイムどう書く」のようなお題にも挑戦して、書いたものはとりあえず GitHub に置く、という習慣がこのころにできました。</p><p>Raspberry Pi で電子工作に触れたのもこの時期です。画面の中だけでなく、物理的に何かが動く面白さを知ったことは、のちの micro:bit や Arduino での遊びにつながっています。dotfiles を育て始め、自分の開発環境を自分の手で整えることにも、このころからこだわってきました。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>PHP</li><li>Ruby / Rails</li><li>Objective-C</li><li>Swift</li><li>Raspberry Pi</li><li>dotfiles / Vim</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">6</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/realtime" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">realtime</span><span class="card__year">2014</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">「リアルタイムどう書く」にチャレンジしたときのソース</p><ul class="card__tags"><li>PHP</li><li>アルゴリズム</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/MTL" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">MTL</span><span class="card__year">2014</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">MTLのVIewer(iOS用)です</p><ul class="card__tags"><li>Objective-C</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/RSSReader_Swift" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">RSSReader_Swift</span><span class="card__year">2015</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Swiftの練習用</p><ul class="card__tags"><li>Swift</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/my_depo" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">my_depo</span><span class="card__year">2015</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">railsのお勉強</p><ul class="card__tags"><li>Ruby</li><li>Rails</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/RaspberryPi" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">RaspberryPi</span><span class="card__year">2015</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">ラズベリーパイのサンプルコード集です</p><ul class="card__tags"><li>Raspberry Pi</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/dotfiles" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">dotfiles</span><span class="card__year">2015</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum"></p><ul class="card__tags"><li>Perl</li><li>開発環境</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="data" style="--accent:#e8590c" aria-labelledby="data-title">
+        <div class="chapter__marker" aria-hidden="true"><span>02</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2016 – 2017</code></p>
+          <h2 class="chapter__title" id="data-title">大量のデータを、分散処理でさばく</h2>
+          <div class="chapter__text"><p>関心が「大量のデータをどう扱うか」へと向かった時期です。Hadoop Streaming でのバッチ処理から始めて、Apache Spark、Kafka、ZooKeeper と、分散処理とメッセージングの基盤を一つずつ手元で動かし、仕組みを確かめていきました。</p><p>Spark をきっかけに Scala を学び、関数型の考え方に触れたのもこの時期です。word2vec で文章をベクトルにする実験では、データの「量」だけでなく「意味」を扱う自然言語処理にも足を踏み入れました。並行して、Slack や LINE の bot、Electron など、身近な道具を作ることも続けています。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>Hadoop</li><li>Apache Spark</li><li>Kafka</li><li>ZooKeeper</li><li>Scala</li><li>word2vec</li><li>Bot</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">7</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/Hadoop-Streaming-Sample" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">Hadoop-Streaming-Sample</span><span class="card__year">2016</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Hadoop Streamingのサンプル</p><ul class="card__tags"><li>Python</li><li>データ基盤</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/spark" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">spark</span><span class="card__year">2016</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Apache Sparkの学習用</p><ul class="card__tags"><li>Scala</li><li>Python</li><li>データ基盤</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/kafka_sample" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">kafka_sample</span><span class="card__year">2017</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">kafkaの検証</p><ul class="card__tags"><li>PHP</li><li>データ基盤</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/zookeeper_sample" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">zookeeper_sample</span><span class="card__year">2017</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">zookeeperをプログラムから使うサンプル</p><ul class="card__tags"><li>Python</li><li>データ基盤</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/zero-scala" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">zero-scala</span><span class="card__year">2017</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">ゼロから始めるscala</p><ul class="card__tags"><li>Scala</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/word2vec-sample" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">word2vec-sample</span><span class="card__year">2017</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">word2vecによる文章のベクトル変換のサンプル</p><ul class="card__tags"><li>Python</li><li>機械学習・NLP</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/LINE-bot-otajisan" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">LINE-bot-otajisan</span><span class="card__year">2016</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">LINE bot</p><ul class="card__tags"><li>Bot</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="quality" style="--accent:#40c057" aria-labelledby="quality-title">
+        <div class="chapter__marker" aria-hidden="true"><span>03</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2018</code></p>
+          <h2 class="chapter__title" id="quality-title">テストで設計し、仲間と学ぶ</h2>
+          <div class="chapter__text"><p>「動けばいい」から一歩進んで、品質を作り込むことに意識が向いた年です。『テスト駆動Python』を読みながら手を動かし、Cucumber で振る舞いからテストを書き、Danger でプルリクエストのレビューを自動化する。テストを、後から確かめる手段ではなく、設計を導く道具として使うことを身につけようとしていました。</p><p>パーサーコンビネータで Scala をもう一段深く学び、Go にも入門しました。大学の OB の仲間との GitHub の Organization で、Git や Docker、Python を一緒に練習し始めたのもこの年です。人前で話した資料を残し始め、学んだことを外に出すことも意識するようになりました。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>TDD</li><li>Cucumber / BDD</li><li>Danger</li><li>pytest</li><li>Go</li><li>Scala</li><li>Vagrant</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">7</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/tdd-with-python" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">tdd-with-python</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">テスト駆動Pythonを読みつつ</p><ul class="card__tags"><li>Python</li><li>pytest</li><li>テスト・品質</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/cucumber-playground" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">cucumber-playground</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">CucumberでTDDを始めるサンプル(Java版)</p><ul class="card__tags"><li>Java</li><li>テスト・品質</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/hosei-fsc-ob/hosted-danger" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">hosted-danger</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">http://danger.systems/ruby/</p><ul class="card__tags"><li>Ruby</li><li>テスト・品質</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/scala-parser-combinator" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">scala-parser-combinator</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">パーサーコンビネータの学習</p><ul class="card__tags"><li>Scala</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/go-study" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">go-study</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">GOの勉強用:tada:</p><ul class="card__tags"><li>Go</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/hosei-fsc-ob/play-ground" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">play-ground</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">githubの練習に好きに遊ぶリポジトリ。好きに遊んで良いですが、悪いことはダメよ🙅‍♂️</p><ul class="card__tags"></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/presentation-docs" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">presentation-docs</span><span class="card__year">2018</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">公開用プレゼン資料のバックアップ</p><ul class="card__tags"><li>発信</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="service" style="--accent:#4c6ef5" aria-labelledby="service-title">
+        <div class="chapter__marker" aria-hidden="true"><span>04</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2019 – 2020</code></p>
+          <h2 class="chapter__title" id="service-title">Kotlin × AWS で、サービスを丸ごと作る</h2>
+          <div class="chapter__text"><p>サーバーサイドを Kotlin と Spring Boot に据え、インフラまで含めてサービスを一人で丸ごと作り切ることに挑んだ時期です。morning-code という Organization を立ち上げ、API、ブログのサービス、管理画面、DB、Angular のフロントエンドに分けて開発しました。SonarQube による静的解析の環境や、AWS の請求額を通知する仕組みまで、運用を見据えたものも自分で用意しています。</p><p>インフラは AWS CDK でコードとして書くことを徹底しました。Kotlin と TypeScript の両方で CDK を書き、Lambda、ECS / Fargate、AWS Copilot、GitHub Actions によるデプロイの自動化まで、さまざまな構成を試しています。Spring Batch、SQS のコンシューマー、スケジュール実行と、Spring Boot の使い方を一通りサンプルにまとめたのもこのころです。リポジトリの数が最も多いのが 2020 年で、手を動かす量がいちばん多かった時期でもあります。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>Kotlin</li><li>Spring Boot</li><li>AWS CDK</li><li>AWS Lambda</li><li>ECS / Fargate</li><li>AWS Copilot</li><li>GitHub Actions</li><li>Angular</li><li>PostgreSQL</li><li>SonarQube</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">9</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/morning-code/api" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">api</span><span class="card__year">2019</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Morning Code API</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>AWS SDK</li><li>Docker</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/blog-service" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">blog-service</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Morning Code Blog Service</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>Coroutines</li><li>AWS SDK</li><li>Docker</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/web" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">web</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">morningcode.io</p><ul class="card__tags"><li>TypeScript</li><li>Angular</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/sonarqube-service" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">sonarqube-service</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">SonarQube on AWS</p><ul class="card__tags"><li>Kotlin</li><li>AWS CDK</li><li>PostgreSQL</li><li>AWS</li><li>テスト・品質</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/aws-billing-notification" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-billing-notification</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">AWS Billing Notification</p><ul class="card__tags"><li>Kotlin</li><li>AWS</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/infrastructure-cdk" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">infrastructure-cdk</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Morning Code Infrastructure by AWS CDK</p><ul class="card__tags"><li>TypeScript</li><li>AWS CDK</li><li>PostgreSQL</li><li>Redis/Valkey</li><li>JS テスト</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/aws-lambda-cdk-kotlin" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-lambda-cdk-kotlin</span><span class="card__year">2019</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">deploy aws lambda by cdk kotlin</p><ul class="card__tags"><li>Kotlin</li><li>AWS CDK</li><li>Slack</li><li>AWS</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/github-action-aws-copilot-deploy" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">github-action-aws-copilot-deploy</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Deploy application to AWS ECS x Fargate using AWS Copilot</p><ul class="card__tags"><li>AWS</li><li>Docker</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/spring-batch-kotlin-example" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">spring-batch-kotlin-example</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">example of Spring Boot Batch by Kotlin</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>Spring Batch</li><li>Docker</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="security" style="--accent:#e03131" aria-labelledby="security-title">
+        <div class="chapter__marker" aria-hidden="true"><span>05</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2020</code></p>
+          <h2 class="chapter__title" id="security-title">脆弱性を、仕組みで見つける</h2>
+          <div class="chapter__text"><p>サービスを作る側に立ったことで、それをどう守るかにも関心が広がりました。2020 年は、脆弱性の管理をまとめて掘り下げた年です。Vuls を導入し、脆弱性のデータベースである goval-dictionary を AWS 上に CDK で構築し、OVAL の定義と突き合わせるアプリケーションを Spring Boot で書きました。</p><p>コンテナイメージのスキャン（Clair）、依存ライブラリの検査（Snyk）、Go で書いた自作のスキャナーと、守り方を複数の層で比べています。わざと脆弱なライブラリを含めた Docker イメージを用意して、検知の仕組みを確かめることもしました。BCC（eBPF）でのカーネルの観測や、SAML による SSO も、この流れで手を動かしたものです。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>Vuls</li><li>goval-dictionary / OVAL</li><li>Clair</li><li>Snyk</li><li>Go</li><li>eBPF (BCC)</li><li>SAML SSO</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">8</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/vuls-installer" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">vuls-installer</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum"></p><ul class="card__tags"><li>セキュリティ</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/goval-dictionary-cdk" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">goval-dictionary-cdk</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">create goval dictionary server on AWS</p><ul class="card__tags"><li>TypeScript</li><li>JavaScript</li><li>AWS CDK</li><li>JS テスト</li><li>AWS</li></ul></a></li><li class="card"><div class="card__head"><span class="card__title">oval-matcher</span><span class="card__badge">private</span><span class="card__year">2020</span></div><p class="card__sum">goval-dictionary を使う Spring Boot のサンプル</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>セキュリティ</li><li>Docker</li></ul></li><li class="card"><div class="card__head"><span class="card__title">go-vuln-scanner</span><span class="card__badge">private</span><span class="card__year">2020</span></div><p class="card__sum">Go で書いた脆弱性スキャナー</p><ul class="card__tags"><li>Go</li><li>セキュリティ</li></ul></li><li class="card"><div class="card__head"><span class="card__title">clair-example</span><span class="card__badge">private</span><span class="card__year">2020</span></div><p class="card__sum">コンテナの脆弱性スキャナー Clair を試す</p><ul class="card__tags"><li>PostgreSQL</li><li>セキュリティ</li><li>Docker</li></ul></li><li class="card"><a class="card__link" href="https://github.com/otajisan/snyk-aws-integration-user-cdk" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">snyk-aws-integration-user-cdk</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">create snyk user on AWS by CDK</p><ul class="card__tags"><li>Kotlin</li><li>AWS CDK</li><li>AWS</li><li>セキュリティ</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/vulnerable-python-docker-example" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">vulnerable-python-docker-example</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">example python application docker image having vulnerable libraries</p><ul class="card__tags"><li>Python</li><li>Flask</li><li>scikit-learn</li><li>Docker</li><li>セキュリティ</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/bcc-trial" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">bcc-trial</span><span class="card__year">2020</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">trial use of BCC</p><ul class="card__tags"><li>Python</li><li>Docker</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="cloudnative" style="--accent:#15aabf" aria-labelledby="cloudnative-title">
+        <div class="chapter__marker" aria-hidden="true"><span>06</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2021 – 2022</code></p>
+          <h2 class="chapter__title" id="cloudnative-title">クラウドネイティブを、深く</h2>
+          <div class="chapter__text"><p>インフラの関心が、コンテナを動かすことから、コンテナ群をどう運用するかへと深まった時期です。Kubernetes の上で Spring Boot を動かし、Istio でサービスメッシュを試し、OPA でポリシーを書きました。EKS のクラスターは CDK で組み、試行錯誤のコミットは 60 回に及びます。AWS App Mesh と Cognito を組み合わせた認証つきのマイクロサービス、Terraform Cloud、Windows Server への Elastic Beats の導入と、守備範囲を広げました。</p><p>同時に、「依存関係を新しく保つ」という運用の手間を自動化することにも取り組みました。AWS CDK の新しいリリースを検知し、更新のプルリクエストを自動で作る仕組みを、Python と GitHub Actions で作っています。形態素解析の API や単語ベクトルの可視化など、2017 年に触れた自然言語処理を、使える形の道具にすることも続けました。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>Kubernetes</li><li>Amazon EKS</li><li>Istio</li><li>OPA</li><li>AWS App Mesh</li><li>Cognito</li><li>Terraform</li><li>Elastic Stack</li><li>GitHub Actions</li><li>FastAPI</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">8</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/eks-cdk" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">eks-cdk</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">AWS CDK for EKS</p><ul class="card__tags"><li>TypeScript</li><li>JavaScript</li><li>AWS CDK</li><li>JS テスト</li><li>AWS</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/spring-boot-on-k8s" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">spring-boot-on-k8s</span><span class="card__year">2021</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Spring Boot App on kubernetes</p><ul class="card__tags"><li>Kubernetes</li></ul></a></li><li class="card"><div class="card__head"><span class="card__title">istio-playground</span><span class="card__badge">private</span><span class="card__year">2021</span></div><p class="card__sum">minikube 上で Istio を試す</p><ul class="card__tags"><li>Istio</li></ul></li><li class="card"><a class="card__link" href="https://github.com/otajisan/aws-app-mesh-cognito-auth-example" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-app-mesh-cognito-auth-example</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">AWS App Mesh and Cognito Auth example</p><ul class="card__tags"><li>TypeScript</li><li>Kotlin</li><li>AWS</li><li>認証</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/morning-code/aws-cdk-update-checker" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-cdk-update-checker</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Check script for AWS CDK latest releases</p><ul class="card__tags"><li>Python</li><li>AWS CDK</li><li>pytest</li><li>AWS</li><li>Docker</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/aws-cdk-update-pr-builder-ts" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-cdk-update-pr-builder-ts</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Create a Pull Request for AWS CDK</p><ul class="card__tags"><li>AWS</li><li>AWS CDK</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/terraform-cloud-trial" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">terraform-cloud-trial</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Trial for Terraform Cloud</p><ul class="card__tags"><li>HCL</li><li>Terraform</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/morphological-analyzer-api" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">morphological-analyzer-api</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Morphological Analyzer API (Python x Fast API)</p><ul class="card__tags"><li>Python</li><li>FastAPI</li><li>pytest</li><li>機械学習・NLP</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="community" style="--accent:#be4bdb" aria-labelledby="community-title">
+        <div class="chapter__marker" aria-hidden="true"><span>07</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2021 – 2022</code></p>
+          <h2 class="chapter__title" id="community-title">つくる楽しさを広げ、仲間と学ぶ</h2>
+          <div class="chapter__text"><p>クラウドを深掘りするのと並行して、「つくる楽しさ」を別の方向にも広げていました。micro:bit と MakeCode で、ゲームやテルミンなど十数個の作品を作っています。TypeScript で拡張機能として公開し、ブラウザからすぐに遊べる形にしました。Three.js、React、Vue、Arduino と、触ったことのない技術を気軽に試す姿勢は、最初のころから変わっていません。</p><p>もう一つの柱がコミュニティです。アジャイルひよこクラブの運営に関わり、幹事会の日程調整や、connpass のイベント情報を集めるツールを自作しました。アジャイルの体験を持ち寄る合同誌『ぼくのアジャイル100本ノック』にも寄稿しています。技術を一人で磨くだけでなく、仲間と学び合う場を作ることが、この時期から大切なテーマになりました。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>micro:bit / MakeCode</li><li>TypeScript</li><li>Three.js</li><li>React</li><li>Vue</li><li>Arduino</li><li>アジャイル</li><li>コミュニティ運営</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">8</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/mine-crash" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">mine-crash</span><span class="card__year">2021</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">micro:bit Mine Crash game</p><ul class="card__tags"><li>TypeScript</li><li>Python</li><li>micro:bit</li><li>趣味</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/microbit-theremin" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">microbit-theremin</span><span class="card__year">2021</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">micro:bit Theremin</p><ul class="card__tags"><li>TypeScript</li><li>Python</li><li>micro:bit</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/three-js-prototype" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">three-js-prototype</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Prototype of Three.js</p><ul class="card__tags"><li>TypeScript</li><li>Next.js</li><li>React</li><li>Three.js</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/pokedex-vue" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">pokedex-vue</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum"></p><ul class="card__tags"><li>JavaScript</li><li>TypeScript</li><li>Vue</li><li>JS テスト</li><li>趣味</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/agile-hiyoko-club" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">agile-hiyoko-club</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">アジャイルひよこクラブのページ</p><ul class="card__tags"><li>アジャイル</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/agile-hiyoko-connpass-crawler" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">agile-hiyoko-connpass-crawler</span><span class="card__year">2022</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Agile hiyoko club connpass event page crawler</p><ul class="card__tags"><li>Python</li><li>Scrapy</li><li>BeautifulSoup</li><li>クローラー</li><li>アジャイル</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/Agile100" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">Agile100</span><span class="card__year">2021</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">合同誌『ぼくのアジャイル100本ノック』（fork）</p><ul class="card__tags"><li>C++</li><li>アジャイル</li></ul></a></li><li class="card"><div class="card__head"><span class="card__title">Agile100-otajisan</span><span class="card__badge">private</span><span class="card__year">2022</span></div><p class="card__sum">合同誌『ぼくのアジャイル100本ノック』への寄稿の原稿</p><ul class="card__tags"><li>アジャイル</li></ul></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="genai" style="--accent:#12b886" aria-labelledby="genai-title">
+        <div class="chapter__marker" aria-hidden="true"><span>08</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2023 – 2024</code></p>
+          <h2 class="chapter__title" id="genai-title">生成 AI に触れ、土台を磨き直す</h2>
+          <div class="chapter__text"><p>2023 年、生成 AI の登場を受けて、さっそく OpenAI の API を自分のアプリケーションに組み込み始めました。FastAPI からテキスト生成を呼ぶ実験、文章に合う画像を生成するツール、Discord の bot。新しい技術を、まず手元の小さな道具に組み込んで確かめる、というやり方はここでも同じです。</p><p>一方で、サーバーサイドの土台も磨き直しています。Spring Boot × gRPC、Kinesis Data Streams、LocalStack によるローカルでの AWS の再現、Elasticsearch × Kotlin、Django のバッチ、Kotlin での Slack アプリ。派手さはなくても、長く使われ続ける技術を一つずつ確かめ直した時期でした。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>OpenAI API</li><li>FastAPI</li><li>Discord Bot</li><li>gRPC</li><li>Kinesis</li><li>LocalStack</li><li>Elasticsearch</li><li>Django</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">8</span></summary>
+            <ul class="cards"><li class="card"><div class="card__head"><span class="card__title">open-ai-experiments</span><span class="card__badge">private</span><span class="card__year">2023</span></div><p class="card__sum">OpenAI API を FastAPI から使う実験</p><ul class="card__tags"><li>Python</li><li>AWS SDK</li><li>FastAPI</li><li>gensim</li><li>OpenAI API</li></ul></li><li class="card"><a class="card__link" href="https://github.com/otajisan/openai-image-generator" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">openai-image-generator</span><span class="card__year">2023</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Generate suitable image by using Open AI API</p><ul class="card__tags"><li>Python</li><li>OpenAI API</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/bukichi-bot" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">bukichi-bot</span><span class="card__year">2023</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Discord bukichi bot</p><ul class="card__tags"><li>Python</li><li>Jupyter</li><li>Discord</li><li>Bot</li><li>趣味</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/spring-boot-grpc-kotlin-playground" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">spring-boot-grpc-kotlin-playground</span><span class="card__year">2023</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Spring Boot x gRPC example</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>gRPC</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/aws-kinesis-data-stream-trial" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">aws-kinesis-data-stream-trial</span><span class="card__year">2023</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Trial for AWS Kinesis Data Stream</p><ul class="card__tags"><li>Kotlin</li><li>AWS</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/localstack-playground" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">localstack-playground</span><span class="card__year">2023</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">LocalStack playground</p><ul class="card__tags"><li>Python</li><li>Docker</li></ul></a></li><li class="card"><div class="card__head"><span class="card__title">elasticsearch-kotlin-playground</span><span class="card__badge">private</span><span class="card__year">2024</span></div><p class="card__sum">Elasticsearch × Kotlin の検証</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>Coroutines</li><li>gRPC</li><li>Elasticsearch</li></ul></li><li class="card"><a class="card__link" href="https://github.com/otajisan/slack-app-kotlin" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">slack-app-kotlin</span><span class="card__year">2024</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Slack App Kotlin example</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>Slack</li><li>Bot</li></ul></a></li></ul>
+          </details>
+        </div>
+      </section>
+      <section class="chapter reveal" id="agents" style="--accent:#7950f2" aria-labelledby="agents-title">
+        <div class="chapter__marker" aria-hidden="true"><span>09</span></div>
+        <div class="chapter__body">
+          <p class="chapter__period"><code>2025 – 2026</code></p>
+          <h2 class="chapter__title" id="agents-title">AI エージェントと、一緒に開発する</h2>
+          <div class="chapter__text"><p>生成 AI を「呼び出す」段階から、AI エージェントと「一緒に働く」段階へ進んだのが今です。Spring AI で YouTube の MCP サーバーを作り、Vertex AI Search と Gemini で RAG を組んだ MCP サーバーを Python と Go と Kotlin で試作しました。AI に道具と知識をどう渡すかを、プロトコルのレベルで確かめています。</p><p>開発の進め方そのものも変わりました。Claude Code のカスタムスキルを育て、レビューから修正、プルリクエストの作成までを自動化しています。Slack に貼ったプルリクエストを AI がレビューする仕組み、GitHub の活動の要約、技術記事のフィードを Gemini で採点して届ける仕組みと、日々の仕事を AI と分担する道具を自作し続けています。2026 年はコミット数がこれまでで最も多く、作る速さが一段上がったことを実感しています。</p></div>
+          <h3 class="sub">身につけた技術</h3>
+          <ul class="skills"><li>Claude Code</li><li>MCP</li><li>Spring AI</li><li>Vertex AI Search</li><li>Gemini</li><li>RAG</li><li>Kotlin/Wasm</li><li>CircleCI</li></ul>
+          <details class="evidence" open>
+            <summary>この時期の取り組み <span class="count">8</span></summary>
+            <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/spring-youtube-mcp" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">spring-youtube-mcp</span><span class="card__year">2025</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">YouTube MCP by Spring AI</p><ul class="card__tags"><li>Kotlin</li><li>Spring Boot</li><li>MCP</li><li>YouTube API</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/vertex-ai-search-mcp-prototype" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">vertex-ai-search-mcp-prototype</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Prototype of using VertexAI Search MCP</p><ul class="card__tags"><li>Go</li><li>Kotlin</li><li>MCP</li><li>Vertex AI</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/notebooklm-enterprise-experiments-py" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">notebooklm-enterprise-experiments-py</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Vertex AI Search と Gemini で RAG を組んだ MCP サーバー</p><ul class="card__tags"><li>Python</li><li>MCP</li><li>Vertex AI</li><li>pytest</li><li>RAG</li></ul></a></li><li class="card"><div class="card__head"><span class="card__title">claude-skills-playground</span><span class="card__badge">private</span><span class="card__year">2026</span></div><p class="card__sum">Claude Code 向けのカスタムスキル（レビュー → 修正 → PR 作成の自動化など）を育てる</p><ul class="card__tags"><li>TypeScript</li><li>Python</li><li>Claude</li></ul></li><li class="card"><a class="card__link" href="https://github.com/otajisan/review-automator" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">review-automator</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">Slack に貼った PR を Claude Code がレビューし、ワンクリックで GitHub に投稿する</p><ul class="card__tags"><li>TypeScript</li><li>Claude</li><li>Slack</li><li>JS テスト</li><li>テスト・品質</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/github-brief" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">github-brief</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">GitHub の活動の要約を Claude Code と gh で作り、Slack とローカルの HTML に届ける</p><ul class="card__tags"><li>Python</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/daily-feeds" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">daily-feeds</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">技術記事と AI/LLM のフィードを巡回し、Gemini で注目度を採点して GitHub Pages に集約する</p><ul class="card__tags"><li>Python</li><li>JavaScript</li><li>Gemini</li><li>pytest</li></ul></a></li><li class="card card--anon"><div class="card__head"><span class="card__title">非公開のプロジェクト</span><span class="card__year">2026</span></div><p class="card__sum">日々の作業をスキルとエージェントとして蓄積し、Claude Code に代行させるナレッジベース</p><ul class="card__tags"><li>Python</li></ul></li></ul>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <section class="now reveal" aria-labelledby="now-title">
+      <h2 class="section-title" id="now-title"><span class="section-title__no">→</span>いま、そしてこれから</h2>
+      <div class="chapter__text"><p>振り返ると、関心の対象は Web、データ、品質、クラウド、セキュリティ、AI と移り変わってきました。それでも、新しいものはまず自分の手で動かしてみる、作ったものは公開して誰かの役に立てる、という姿勢はずっと同じです。</p><p>これからは、AI エージェントと一緒に作る速さを活かして、技術を身の回りの課題にも向けていきたいと考えています。川崎の二ヶ領用水の自然を守るための調査と仕組みづくりも、その一つとして始めました。</p></div>
+      <ul class="cards"><li class="card"><a class="card__link" href="https://github.com/otajisan/nikaryo-oikawa" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">nikaryo-oikawa</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">武蔵小杉の二ヶ領用水にもオイカワを — 川崎市の二ヶ領用水をきれいにし、自然を守る（桜並木のクビアカツヤカミキリ対策を含む）</p><ul class="card__tags"><li>Python</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/youtube-handle-id-converter" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">youtube-handle-id-converter</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">YouTube のハンドル (@handle) と Channel ID を相互変換する Web ツール</p><ul class="card__tags"><li>Kotlin</li><li>TypeScript</li><li>HCL</li><li>YouTube API</li></ul></a></li><li class="card"><a class="card__link" href="https://github.com/otajisan/cmux-setup" target="_blank" rel="noopener"><div class="card__head"><span class="card__title">cmux-setup</span><span class="card__year">2026</span><span class="card__arrow" aria-hidden="true">↗</span></div><p class="card__sum">cmux とシェルプロンプトの見た目をどの Mac でも揃える設定</p><ul class="card__tags"><li>開発環境</li></ul></a></li></ul>
+    </section>
+
+    <section class="links reveal" aria-labelledby="links-title">
+      <h2 class="section-title" id="links-title"><span class="section-title__no">@</span>ほかの場所でも</h2>
+      <ul class="links__list"><li><a href="https://github.com/otajisan" target="_blank" rel="noopener">GitHub<span aria-hidden="true">↗</span></a></li><li><a href="https://qiita.com/monhan" target="_blank" rel="noopener">Qiita<span aria-hidden="true">↗</span></a></li><li><a href="https://zenn.dev/otajisan" target="_blank" rel="noopener">Zenn<span aria-hidden="true">↗</span></a></li><li><a href="https://speakerdeck.com/otajisan" target="_blank" rel="noopener">Speaker Deck<span aria-hidden="true">↗</span></a></li><li><a href="https://hub.docker.com/u/otajisan" target="_blank" rel="noopener">Docker Hub<span aria-hidden="true">↗</span></a></li><li><a href="https://pypi.org/user/otajisan/" target="_blank" rel="noopener">PyPI<span aria-hidden="true">↗</span></a></li><li><a href="https://twitter.com/otajisan" target="_blank" rel="noopener">X (Twitter)<span aria-hidden="true">↗</span></a></li></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 otajisan · このページも <a href="https://github.com/otajisan/otajisan.github.io">GitHub</a> で公開しています</p>
+  </footer>
+  <script src="main.js" defer></script>
+</body>
+</html>

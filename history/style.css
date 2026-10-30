@@ -104,12 +104,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 }
 .hero__lead { max-width: 640px; margin: 24px 0 0; color: var(--text-2); font-size: 17px; }
 
-.stats { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.stats { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
 .stat {
-  padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 16px; border: 1px solid var(--line); border-radius: 14px;
   background: linear-gradient(180deg, var(--panel), var(--bg-2)); box-shadow: var(--shadow);
 }
-.stat__num { display: block; white-space: nowrap; font-family: var(--mono); font-size: 34px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.stat__num { display: block; white-space: nowrap; font-family: var(--mono); font-size: 30px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .stat__num small { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--text-2); margin-left: 4px; }
 .stat__note { color: var(--muted); font-size: 13px; }
 
@@ -216,6 +216,10 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .card__tags li { font-size: 11px; font-family: var(--mono); color: var(--muted); }
 .card__tags li + li::before { content: "· "; }
 .card--anon { border-style: dashed; }
+/* 記事は文章なので、等幅ではなく本文の書体で見せる */
+.card--article .card__title { font-family: var(--sans); font-size: 13.5px; line-height: 1.5; word-break: normal; overflow-wrap: anywhere; }
+.card--article .card__head { align-items: flex-start; }
+.card--article .card__tags { margin-top: 8px; }
 .card--anon .card__title { font-family: var(--sans); color: var(--muted); }
 
 /* いま・リンク */
@@ -241,11 +245,20 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   .toc a, .card, .heat__cell { transition: none; }
 }
 
+/* 数字が 5 つなので、中くらいの幅では 3 + 2 の 2 段に組む */
+@media (max-width: 1100px) {
+  .stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .stat { grid-column: span 2; }
+  .stat:nth-child(n+4) { grid-column: span 3; }
+}
+
 @media (max-width: 760px) {
   body { font-size: 15px; }
   main { padding: 0 16px; }
   .hero { padding: 72px 0 48px; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat, .stat:nth-child(n+4) { grid-column: auto; }
+  .stat:first-child { grid-column: span 2; }
   .stat { padding: 14px 14px; }
   .stat__num { font-size: 26px; }
   .stat__num small { font-size: 12px; }

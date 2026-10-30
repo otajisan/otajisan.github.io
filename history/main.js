@@ -63,7 +63,8 @@
       cell.addEventListener("mouseleave", hide);
     });
     // スクロールすると位置がずれるので、いったん隠す
-    figure.querySelector(".heat-scroll").addEventListener("scroll", hide, { passive: true });
+    const scroller = figure.querySelector(".heat-scroll");
+    if (scroller) scroller.addEventListener("scroll", hide, { passive: true });
   });
   window.addEventListener("scroll", () => tips.forEach((tip) => { tip.hidden = true; }), { passive: true });
 })();

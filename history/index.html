@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>自分と技術の歩み | otajisan</title>
-  <meta name="description" content="作って、試して、また作る。GitHub に残してきた 200 を超えるリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
+  <meta name="description" content="作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
   <meta property="og:title" content="自分と技術の歩み | otajisan">
-  <meta property="og:description" content="作って、試して、また作る。GitHub に残してきた 200 を超えるリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
+  <meta property="og:description" content="作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://otajisan.github.io/history/">
   <meta name="color-scheme" content="dark light">
@@ -17,6 +17,10 @@
       var t = localStorage.getItem("history-theme");
       if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
       document.documentElement.classList.add("js");
+      // main.js が読み込めなかったときは、フェードインをやめて本文を見せる
+      setTimeout(function () {
+        if (!window.__historyReady) document.documentElement.classList.remove("js");
+      }, 3000);
     })();
   </script>
 </head>
@@ -32,7 +36,7 @@
       <div class="hero__glow" aria-hidden="true"></div>
       <p class="hero__eyebrow"><code><span class="prompt">$</span> git log --reverse <span class="caret" aria-hidden="true"></span></code></p>
       <h1 class="hero__title">自分と技術の歩み</h1>
-      <p class="hero__lead">作って、試して、また作る。GitHub に残してきた 200 を超えるリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。</p>
+      <p class="hero__lead">作って、試して、また作る。これまで GitHub に残してきたリポジトリをたどり直し、その時々に何を身につけようとしていたのかを、時期ごとにまとめました。</p>
       <ul class="stats"><li class="stat"><span class="stat__num">14<small>年</small></span><span class="stat__note">2013 年から 2026 年まで</span></li><li class="stat"><span class="stat__num">173<small>リポジトリ</small></span><span class="stat__note">GitHub に残してきたもの</span></li><li class="stat"><span class="stat__num">21<small>言語</small></span><span class="stat__note">書いてきたプログラミング言語</span></li><li class="stat"><span class="stat__num">2,404<small>コミット</small></span><span class="stat__note">掲載したリポジトリの合計</span></li></ul>
       <div class="langs">
         <span class="langs__label">よく使ってきた言語</span>
@@ -62,140 +66,140 @@
 <text class="heat__year" x="629.0" y="18" text-anchor="middle">2025</text>
 <text class="heat__year" x="666.0" y="18" text-anchor="middle">2026</text>
 <text class="heat__label" x="156" y="49.0" text-anchor="end">モバイル・フロントエンド</text>
-<rect class="heat__cell q0" x="168" y="28" width="34" height="34" rx="4" data-tip="2013 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2013 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q1" x="205" y="28" width="34" height="34" rx="4" data-tip="2014 年 · モバイル・フロントエンド：1 件" tabindex="0" aria-label="2014 年 モバイル・フロントエンド 1 件"></rect>
-<rect class="heat__cell q3" x="242" y="28" width="34" height="34" rx="4" data-tip="2015 年 · モバイル・フロントエンド：4 件" tabindex="0" aria-label="2015 年 モバイル・フロントエンド 4 件"></rect>
-<rect class="heat__cell q1" x="279" y="28" width="34" height="34" rx="4" data-tip="2016 年 · モバイル・フロントエンド：1 件" tabindex="0" aria-label="2016 年 モバイル・フロントエンド 1 件"></rect>
-<rect class="heat__cell q0" x="316" y="28" width="34" height="34" rx="4" data-tip="2017 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2017 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q0" x="353" y="28" width="34" height="34" rx="4" data-tip="2018 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2018 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q0" x="390" y="28" width="34" height="34" rx="4" data-tip="2019 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2019 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q1" x="427" y="28" width="34" height="34" rx="4" data-tip="2020 年 · モバイル・フロントエンド：1 件" tabindex="0" aria-label="2020 年 モバイル・フロントエンド 1 件"></rect>
-<rect class="heat__cell q1" x="464" y="28" width="34" height="34" rx="4" data-tip="2021 年 · モバイル・フロントエンド：1 件" tabindex="0" aria-label="2021 年 モバイル・フロントエンド 1 件"></rect>
-<rect class="heat__cell q3" x="501" y="28" width="34" height="34" rx="4" data-tip="2022 年 · モバイル・フロントエンド：4 件" tabindex="0" aria-label="2022 年 モバイル・フロントエンド 4 件"></rect>
-<rect class="heat__cell q0" x="538" y="28" width="34" height="34" rx="4" data-tip="2023 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2023 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q0" x="575" y="28" width="34" height="34" rx="4" data-tip="2024 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2024 年 モバイル・フロントエンド 0 件"></rect>
-<rect class="heat__cell q2" x="612" y="28" width="34" height="34" rx="4" data-tip="2025 年 · モバイル・フロントエンド：2 件" tabindex="0" aria-label="2025 年 モバイル・フロントエンド 2 件"></rect>
-<rect class="heat__cell q0" x="649" y="28" width="34" height="34" rx="4" data-tip="2026 年 · モバイル・フロントエンド：0 件" tabindex="0" aria-label="2026 年 モバイル・フロントエンド 0 件"></rect>
+<rect class="heat__cell q0" x="168" y="28" width="34" height="34" rx="4" data-tip="2013 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q1" x="205" y="28" width="34" height="34" rx="4" data-tip="2014 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q3" x="242" y="28" width="34" height="34" rx="4" data-tip="2015 年 · モバイル・フロントエンド：4 件"></rect>
+<rect class="heat__cell q1" x="279" y="28" width="34" height="34" rx="4" data-tip="2016 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q0" x="316" y="28" width="34" height="34" rx="4" data-tip="2017 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="28" width="34" height="34" rx="4" data-tip="2018 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="28" width="34" height="34" rx="4" data-tip="2019 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q1" x="427" y="28" width="34" height="34" rx="4" data-tip="2020 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q1" x="464" y="28" width="34" height="34" rx="4" data-tip="2021 年 · モバイル・フロントエンド：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="28" width="34" height="34" rx="4" data-tip="2022 年 · モバイル・フロントエンド：4 件"></rect>
+<rect class="heat__cell q0" x="538" y="28" width="34" height="34" rx="4" data-tip="2023 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="28" width="34" height="34" rx="4" data-tip="2024 年 · モバイル・フロントエンド：0 件"></rect>
+<rect class="heat__cell q2" x="612" y="28" width="34" height="34" rx="4" data-tip="2025 年 · モバイル・フロントエンド：2 件"></rect>
+<rect class="heat__cell q0" x="649" y="28" width="34" height="34" rx="4" data-tip="2026 年 · モバイル・フロントエンド：0 件"></rect>
 <text class="heat__label" x="156" y="86.0" text-anchor="end">サーバーサイド</text>
-<rect class="heat__cell q0" x="168" y="65" width="34" height="34" rx="4" data-tip="2013 年 · サーバーサイド：0 件" tabindex="0" aria-label="2013 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="65" width="34" height="34" rx="4" data-tip="2014 年 · サーバーサイド：0 件" tabindex="0" aria-label="2014 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="65" width="34" height="34" rx="4" data-tip="2015 年 · サーバーサイド：0 件" tabindex="0" aria-label="2015 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q0" x="279" y="65" width="34" height="34" rx="4" data-tip="2016 年 · サーバーサイド：0 件" tabindex="0" aria-label="2016 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q0" x="316" y="65" width="34" height="34" rx="4" data-tip="2017 年 · サーバーサイド：0 件" tabindex="0" aria-label="2017 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q0" x="353" y="65" width="34" height="34" rx="4" data-tip="2018 年 · サーバーサイド：0 件" tabindex="0" aria-label="2018 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q2" x="390" y="65" width="34" height="34" rx="4" data-tip="2019 年 · サーバーサイド：2 件" tabindex="0" aria-label="2019 年 サーバーサイド 2 件"></rect>
-<rect class="heat__cell q5" x="427" y="65" width="34" height="34" rx="4" data-tip="2020 年 · サーバーサイド：9 件" tabindex="0" aria-label="2020 年 サーバーサイド 9 件"></rect>
-<rect class="heat__cell q0" x="464" y="65" width="34" height="34" rx="4" data-tip="2021 年 · サーバーサイド：0 件" tabindex="0" aria-label="2021 年 サーバーサイド 0 件"></rect>
-<rect class="heat__cell q2" x="501" y="65" width="34" height="34" rx="4" data-tip="2022 年 · サーバーサイド：2 件" tabindex="0" aria-label="2022 年 サーバーサイド 2 件"></rect>
-<rect class="heat__cell q2" x="538" y="65" width="34" height="34" rx="4" data-tip="2023 年 · サーバーサイド：2 件" tabindex="0" aria-label="2023 年 サーバーサイド 2 件"></rect>
-<rect class="heat__cell q3" x="575" y="65" width="34" height="34" rx="4" data-tip="2024 年 · サーバーサイド：3 件" tabindex="0" aria-label="2024 年 サーバーサイド 3 件"></rect>
-<rect class="heat__cell q3" x="612" y="65" width="34" height="34" rx="4" data-tip="2025 年 · サーバーサイド：3 件" tabindex="0" aria-label="2025 年 サーバーサイド 3 件"></rect>
-<rect class="heat__cell q1" x="649" y="65" width="34" height="34" rx="4" data-tip="2026 年 · サーバーサイド：1 件" tabindex="0" aria-label="2026 年 サーバーサイド 1 件"></rect>
+<rect class="heat__cell q0" x="168" y="65" width="34" height="34" rx="4" data-tip="2013 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="65" width="34" height="34" rx="4" data-tip="2014 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="65" width="34" height="34" rx="4" data-tip="2015 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="65" width="34" height="34" rx="4" data-tip="2016 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="65" width="34" height="34" rx="4" data-tip="2017 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="65" width="34" height="34" rx="4" data-tip="2018 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q2" x="390" y="65" width="34" height="34" rx="4" data-tip="2019 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q5" x="427" y="65" width="34" height="34" rx="4" data-tip="2020 年 · サーバーサイド：9 件"></rect>
+<rect class="heat__cell q0" x="464" y="65" width="34" height="34" rx="4" data-tip="2021 年 · サーバーサイド：0 件"></rect>
+<rect class="heat__cell q2" x="501" y="65" width="34" height="34" rx="4" data-tip="2022 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q2" x="538" y="65" width="34" height="34" rx="4" data-tip="2023 年 · サーバーサイド：2 件"></rect>
+<rect class="heat__cell q3" x="575" y="65" width="34" height="34" rx="4" data-tip="2024 年 · サーバーサイド：3 件"></rect>
+<rect class="heat__cell q3" x="612" y="65" width="34" height="34" rx="4" data-tip="2025 年 · サーバーサイド：3 件"></rect>
+<rect class="heat__cell q1" x="649" y="65" width="34" height="34" rx="4" data-tip="2026 年 · サーバーサイド：1 件"></rect>
 <text class="heat__label" x="156" y="123.0" text-anchor="end">クラウド・インフラ</text>
-<rect class="heat__cell q0" x="168" y="102" width="34" height="34" rx="4" data-tip="2013 年 · クラウド・インフラ：0 件" tabindex="0" aria-label="2013 年 クラウド・インフラ 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="102" width="34" height="34" rx="4" data-tip="2014 年 · クラウド・インフラ：0 件" tabindex="0" aria-label="2014 年 クラウド・インフラ 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="102" width="34" height="34" rx="4" data-tip="2015 年 · クラウド・インフラ：0 件" tabindex="0" aria-label="2015 年 クラウド・インフラ 0 件"></rect>
-<rect class="heat__cell q0" x="279" y="102" width="34" height="34" rx="4" data-tip="2016 年 · クラウド・インフラ：0 件" tabindex="0" aria-label="2016 年 クラウド・インフラ 0 件"></rect>
-<rect class="heat__cell q0" x="316" y="102" width="34" height="34" rx="4" data-tip="2017 年 · クラウド・インフラ：0 件" tabindex="0" aria-label="2017 年 クラウド・インフラ 0 件"></rect>
-<rect class="heat__cell q1" x="353" y="102" width="34" height="34" rx="4" data-tip="2018 年 · クラウド・インフラ：1 件" tabindex="0" aria-label="2018 年 クラウド・インフラ 1 件"></rect>
-<rect class="heat__cell q4" x="390" y="102" width="34" height="34" rx="4" data-tip="2019 年 · クラウド・インフラ：7 件" tabindex="0" aria-label="2019 年 クラウド・インフラ 7 件"></rect>
-<rect class="heat__cell q5" x="427" y="102" width="34" height="34" rx="4" data-tip="2020 年 · クラウド・インフラ：28 件" tabindex="0" aria-label="2020 年 クラウド・インフラ 28 件"></rect>
-<rect class="heat__cell q5" x="464" y="102" width="34" height="34" rx="4" data-tip="2021 年 · クラウド・インフラ：8 件" tabindex="0" aria-label="2021 年 クラウド・インフラ 8 件"></rect>
-<rect class="heat__cell q5" x="501" y="102" width="34" height="34" rx="4" data-tip="2022 年 · クラウド・インフラ：12 件" tabindex="0" aria-label="2022 年 クラウド・インフラ 12 件"></rect>
-<rect class="heat__cell q3" x="538" y="102" width="34" height="34" rx="4" data-tip="2023 年 · クラウド・インフラ：3 件" tabindex="0" aria-label="2023 年 クラウド・インフラ 3 件"></rect>
-<rect class="heat__cell q3" x="575" y="102" width="34" height="34" rx="4" data-tip="2024 年 · クラウド・インフラ：3 件" tabindex="0" aria-label="2024 年 クラウド・インフラ 3 件"></rect>
-<rect class="heat__cell q1" x="612" y="102" width="34" height="34" rx="4" data-tip="2025 年 · クラウド・インフラ：1 件" tabindex="0" aria-label="2025 年 クラウド・インフラ 1 件"></rect>
-<rect class="heat__cell q1" x="649" y="102" width="34" height="34" rx="4" data-tip="2026 年 · クラウド・インフラ：1 件" tabindex="0" aria-label="2026 年 クラウド・インフラ 1 件"></rect>
+<rect class="heat__cell q0" x="168" y="102" width="34" height="34" rx="4" data-tip="2013 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="102" width="34" height="34" rx="4" data-tip="2014 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="102" width="34" height="34" rx="4" data-tip="2015 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="102" width="34" height="34" rx="4" data-tip="2016 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="102" width="34" height="34" rx="4" data-tip="2017 年 · クラウド・インフラ：0 件"></rect>
+<rect class="heat__cell q1" x="353" y="102" width="34" height="34" rx="4" data-tip="2018 年 · クラウド・インフラ：1 件"></rect>
+<rect class="heat__cell q4" x="390" y="102" width="34" height="34" rx="4" data-tip="2019 年 · クラウド・インフラ：7 件"></rect>
+<rect class="heat__cell q5" x="427" y="102" width="34" height="34" rx="4" data-tip="2020 年 · クラウド・インフラ：28 件"></rect>
+<rect class="heat__cell q5" x="464" y="102" width="34" height="34" rx="4" data-tip="2021 年 · クラウド・インフラ：8 件"></rect>
+<rect class="heat__cell q5" x="501" y="102" width="34" height="34" rx="4" data-tip="2022 年 · クラウド・インフラ：12 件"></rect>
+<rect class="heat__cell q3" x="538" y="102" width="34" height="34" rx="4" data-tip="2023 年 · クラウド・インフラ：3 件"></rect>
+<rect class="heat__cell q3" x="575" y="102" width="34" height="34" rx="4" data-tip="2024 年 · クラウド・インフラ：3 件"></rect>
+<rect class="heat__cell q1" x="612" y="102" width="34" height="34" rx="4" data-tip="2025 年 · クラウド・インフラ：1 件"></rect>
+<rect class="heat__cell q1" x="649" y="102" width="34" height="34" rx="4" data-tip="2026 年 · クラウド・インフラ：1 件"></rect>
 <text class="heat__label" x="156" y="160.0" text-anchor="end">データ・検索</text>
-<rect class="heat__cell q0" x="168" y="139" width="34" height="34" rx="4" data-tip="2013 年 · データ・検索：0 件" tabindex="0" aria-label="2013 年 データ・検索 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="139" width="34" height="34" rx="4" data-tip="2014 年 · データ・検索：0 件" tabindex="0" aria-label="2014 年 データ・検索 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="139" width="34" height="34" rx="4" data-tip="2015 年 · データ・検索：0 件" tabindex="0" aria-label="2015 年 データ・検索 0 件"></rect>
-<rect class="heat__cell q2" x="279" y="139" width="34" height="34" rx="4" data-tip="2016 年 · データ・検索：2 件" tabindex="0" aria-label="2016 年 データ・検索 2 件"></rect>
-<rect class="heat__cell q2" x="316" y="139" width="34" height="34" rx="4" data-tip="2017 年 · データ・検索：2 件" tabindex="0" aria-label="2017 年 データ・検索 2 件"></rect>
-<rect class="heat__cell q0" x="353" y="139" width="34" height="34" rx="4" data-tip="2018 年 · データ・検索：0 件" tabindex="0" aria-label="2018 年 データ・検索 0 件"></rect>
-<rect class="heat__cell q2" x="390" y="139" width="34" height="34" rx="4" data-tip="2019 年 · データ・検索：2 件" tabindex="0" aria-label="2019 年 データ・検索 2 件"></rect>
-<rect class="heat__cell q5" x="427" y="139" width="34" height="34" rx="4" data-tip="2020 年 · データ・検索：9 件" tabindex="0" aria-label="2020 年 データ・検索 9 件"></rect>
-<rect class="heat__cell q3" x="464" y="139" width="34" height="34" rx="4" data-tip="2021 年 · データ・検索：4 件" tabindex="0" aria-label="2021 年 データ・検索 4 件"></rect>
-<rect class="heat__cell q3" x="501" y="139" width="34" height="34" rx="4" data-tip="2022 年 · データ・検索：4 件" tabindex="0" aria-label="2022 年 データ・検索 4 件"></rect>
-<rect class="heat__cell q1" x="538" y="139" width="34" height="34" rx="4" data-tip="2023 年 · データ・検索：1 件" tabindex="0" aria-label="2023 年 データ・検索 1 件"></rect>
-<rect class="heat__cell q3" x="575" y="139" width="34" height="34" rx="4" data-tip="2024 年 · データ・検索：3 件" tabindex="0" aria-label="2024 年 データ・検索 3 件"></rect>
-<rect class="heat__cell q1" x="612" y="139" width="34" height="34" rx="4" data-tip="2025 年 · データ・検索：1 件" tabindex="0" aria-label="2025 年 データ・検索 1 件"></rect>
-<rect class="heat__cell q0" x="649" y="139" width="34" height="34" rx="4" data-tip="2026 年 · データ・検索：0 件" tabindex="0" aria-label="2026 年 データ・検索 0 件"></rect>
+<rect class="heat__cell q0" x="168" y="139" width="34" height="34" rx="4" data-tip="2013 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="139" width="34" height="34" rx="4" data-tip="2014 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="139" width="34" height="34" rx="4" data-tip="2015 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q2" x="279" y="139" width="34" height="34" rx="4" data-tip="2016 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q2" x="316" y="139" width="34" height="34" rx="4" data-tip="2017 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q0" x="353" y="139" width="34" height="34" rx="4" data-tip="2018 年 · データ・検索：0 件"></rect>
+<rect class="heat__cell q2" x="390" y="139" width="34" height="34" rx="4" data-tip="2019 年 · データ・検索：2 件"></rect>
+<rect class="heat__cell q5" x="427" y="139" width="34" height="34" rx="4" data-tip="2020 年 · データ・検索：9 件"></rect>
+<rect class="heat__cell q3" x="464" y="139" width="34" height="34" rx="4" data-tip="2021 年 · データ・検索：4 件"></rect>
+<rect class="heat__cell q3" x="501" y="139" width="34" height="34" rx="4" data-tip="2022 年 · データ・検索：4 件"></rect>
+<rect class="heat__cell q1" x="538" y="139" width="34" height="34" rx="4" data-tip="2023 年 · データ・検索：1 件"></rect>
+<rect class="heat__cell q3" x="575" y="139" width="34" height="34" rx="4" data-tip="2024 年 · データ・検索：3 件"></rect>
+<rect class="heat__cell q1" x="612" y="139" width="34" height="34" rx="4" data-tip="2025 年 · データ・検索：1 件"></rect>
+<rect class="heat__cell q0" x="649" y="139" width="34" height="34" rx="4" data-tip="2026 年 · データ・検索：0 件"></rect>
 <text class="heat__label" x="156" y="197.0" text-anchor="end">セキュリティ・認証</text>
-<rect class="heat__cell q0" x="168" y="176" width="34" height="34" rx="4" data-tip="2013 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2013 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="176" width="34" height="34" rx="4" data-tip="2014 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2014 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="176" width="34" height="34" rx="4" data-tip="2015 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2015 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="279" y="176" width="34" height="34" rx="4" data-tip="2016 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2016 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="316" y="176" width="34" height="34" rx="4" data-tip="2017 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2017 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="353" y="176" width="34" height="34" rx="4" data-tip="2018 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2018 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="390" y="176" width="34" height="34" rx="4" data-tip="2019 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2019 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q5" x="427" y="176" width="34" height="34" rx="4" data-tip="2020 年 · セキュリティ・認証：8 件" tabindex="0" aria-label="2020 年 セキュリティ・認証 8 件"></rect>
-<rect class="heat__cell q1" x="464" y="176" width="34" height="34" rx="4" data-tip="2021 年 · セキュリティ・認証：1 件" tabindex="0" aria-label="2021 年 セキュリティ・認証 1 件"></rect>
-<rect class="heat__cell q3" x="501" y="176" width="34" height="34" rx="4" data-tip="2022 年 · セキュリティ・認証：3 件" tabindex="0" aria-label="2022 年 セキュリティ・認証 3 件"></rect>
-<rect class="heat__cell q0" x="538" y="176" width="34" height="34" rx="4" data-tip="2023 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2023 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="575" y="176" width="34" height="34" rx="4" data-tip="2024 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2024 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="612" y="176" width="34" height="34" rx="4" data-tip="2025 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2025 年 セキュリティ・認証 0 件"></rect>
-<rect class="heat__cell q0" x="649" y="176" width="34" height="34" rx="4" data-tip="2026 年 · セキュリティ・認証：0 件" tabindex="0" aria-label="2026 年 セキュリティ・認証 0 件"></rect>
+<rect class="heat__cell q0" x="168" y="176" width="34" height="34" rx="4" data-tip="2013 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="176" width="34" height="34" rx="4" data-tip="2014 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="176" width="34" height="34" rx="4" data-tip="2015 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="176" width="34" height="34" rx="4" data-tip="2016 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="176" width="34" height="34" rx="4" data-tip="2017 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="176" width="34" height="34" rx="4" data-tip="2018 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="176" width="34" height="34" rx="4" data-tip="2019 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q5" x="427" y="176" width="34" height="34" rx="4" data-tip="2020 年 · セキュリティ・認証：8 件"></rect>
+<rect class="heat__cell q1" x="464" y="176" width="34" height="34" rx="4" data-tip="2021 年 · セキュリティ・認証：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="176" width="34" height="34" rx="4" data-tip="2022 年 · セキュリティ・認証：3 件"></rect>
+<rect class="heat__cell q0" x="538" y="176" width="34" height="34" rx="4" data-tip="2023 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="176" width="34" height="34" rx="4" data-tip="2024 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="176" width="34" height="34" rx="4" data-tip="2025 年 · セキュリティ・認証：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="176" width="34" height="34" rx="4" data-tip="2026 年 · セキュリティ・認証：0 件"></rect>
 <text class="heat__label" x="156" y="234.0" text-anchor="end">テスト・自動化</text>
-<rect class="heat__cell q0" x="168" y="213" width="34" height="34" rx="4" data-tip="2013 年 · テスト・自動化：0 件" tabindex="0" aria-label="2013 年 テスト・自動化 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="213" width="34" height="34" rx="4" data-tip="2014 年 · テスト・自動化：0 件" tabindex="0" aria-label="2014 年 テスト・自動化 0 件"></rect>
-<rect class="heat__cell q1" x="242" y="213" width="34" height="34" rx="4" data-tip="2015 年 · テスト・自動化：1 件" tabindex="0" aria-label="2015 年 テスト・自動化 1 件"></rect>
-<rect class="heat__cell q2" x="279" y="213" width="34" height="34" rx="4" data-tip="2016 年 · テスト・自動化：2 件" tabindex="0" aria-label="2016 年 テスト・自動化 2 件"></rect>
-<rect class="heat__cell q0" x="316" y="213" width="34" height="34" rx="4" data-tip="2017 年 · テスト・自動化：0 件" tabindex="0" aria-label="2017 年 テスト・自動化 0 件"></rect>
-<rect class="heat__cell q3" x="353" y="213" width="34" height="34" rx="4" data-tip="2018 年 · テスト・自動化：3 件" tabindex="0" aria-label="2018 年 テスト・自動化 3 件"></rect>
-<rect class="heat__cell q3" x="390" y="213" width="34" height="34" rx="4" data-tip="2019 年 · テスト・自動化：4 件" tabindex="0" aria-label="2019 年 テスト・自動化 4 件"></rect>
-<rect class="heat__cell q4" x="427" y="213" width="34" height="34" rx="4" data-tip="2020 年 · テスト・自動化：5 件" tabindex="0" aria-label="2020 年 テスト・自動化 5 件"></rect>
-<rect class="heat__cell q3" x="464" y="213" width="34" height="34" rx="4" data-tip="2021 年 · テスト・自動化：3 件" tabindex="0" aria-label="2021 年 テスト・自動化 3 件"></rect>
-<rect class="heat__cell q4" x="501" y="213" width="34" height="34" rx="4" data-tip="2022 年 · テスト・自動化：7 件" tabindex="0" aria-label="2022 年 テスト・自動化 7 件"></rect>
-<rect class="heat__cell q3" x="538" y="213" width="34" height="34" rx="4" data-tip="2023 年 · テスト・自動化：3 件" tabindex="0" aria-label="2023 年 テスト・自動化 3 件"></rect>
-<rect class="heat__cell q2" x="575" y="213" width="34" height="34" rx="4" data-tip="2024 年 · テスト・自動化：2 件" tabindex="0" aria-label="2024 年 テスト・自動化 2 件"></rect>
-<rect class="heat__cell q1" x="612" y="213" width="34" height="34" rx="4" data-tip="2025 年 · テスト・自動化：1 件" tabindex="0" aria-label="2025 年 テスト・自動化 1 件"></rect>
-<rect class="heat__cell q3" x="649" y="213" width="34" height="34" rx="4" data-tip="2026 年 · テスト・自動化：4 件" tabindex="0" aria-label="2026 年 テスト・自動化 4 件"></rect>
+<rect class="heat__cell q0" x="168" y="213" width="34" height="34" rx="4" data-tip="2013 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="213" width="34" height="34" rx="4" data-tip="2014 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q1" x="242" y="213" width="34" height="34" rx="4" data-tip="2015 年 · テスト・自動化：1 件"></rect>
+<rect class="heat__cell q2" x="279" y="213" width="34" height="34" rx="4" data-tip="2016 年 · テスト・自動化：2 件"></rect>
+<rect class="heat__cell q0" x="316" y="213" width="34" height="34" rx="4" data-tip="2017 年 · テスト・自動化：0 件"></rect>
+<rect class="heat__cell q3" x="353" y="213" width="34" height="34" rx="4" data-tip="2018 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q3" x="390" y="213" width="34" height="34" rx="4" data-tip="2019 年 · テスト・自動化：4 件"></rect>
+<rect class="heat__cell q4" x="427" y="213" width="34" height="34" rx="4" data-tip="2020 年 · テスト・自動化：5 件"></rect>
+<rect class="heat__cell q3" x="464" y="213" width="34" height="34" rx="4" data-tip="2021 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q4" x="501" y="213" width="34" height="34" rx="4" data-tip="2022 年 · テスト・自動化：7 件"></rect>
+<rect class="heat__cell q3" x="538" y="213" width="34" height="34" rx="4" data-tip="2023 年 · テスト・自動化：3 件"></rect>
+<rect class="heat__cell q2" x="575" y="213" width="34" height="34" rx="4" data-tip="2024 年 · テスト・自動化：2 件"></rect>
+<rect class="heat__cell q1" x="612" y="213" width="34" height="34" rx="4" data-tip="2025 年 · テスト・自動化：1 件"></rect>
+<rect class="heat__cell q3" x="649" y="213" width="34" height="34" rx="4" data-tip="2026 年 · テスト・自動化：4 件"></rect>
 <text class="heat__label" x="156" y="271.0" text-anchor="end">機械学習・生成 AI</text>
-<rect class="heat__cell q0" x="168" y="250" width="34" height="34" rx="4" data-tip="2013 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2013 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="250" width="34" height="34" rx="4" data-tip="2014 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2014 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="250" width="34" height="34" rx="4" data-tip="2015 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2015 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q0" x="279" y="250" width="34" height="34" rx="4" data-tip="2016 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2016 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q1" x="316" y="250" width="34" height="34" rx="4" data-tip="2017 年 · 機械学習・生成 AI：1 件" tabindex="0" aria-label="2017 年 機械学習・生成 AI 1 件"></rect>
-<rect class="heat__cell q0" x="353" y="250" width="34" height="34" rx="4" data-tip="2018 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2018 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q1" x="390" y="250" width="34" height="34" rx="4" data-tip="2019 年 · 機械学習・生成 AI：1 件" tabindex="0" aria-label="2019 年 機械学習・生成 AI 1 件"></rect>
-<rect class="heat__cell q1" x="427" y="250" width="34" height="34" rx="4" data-tip="2020 年 · 機械学習・生成 AI：1 件" tabindex="0" aria-label="2020 年 機械学習・生成 AI 1 件"></rect>
-<rect class="heat__cell q0" x="464" y="250" width="34" height="34" rx="4" data-tip="2021 年 · 機械学習・生成 AI：0 件" tabindex="0" aria-label="2021 年 機械学習・生成 AI 0 件"></rect>
-<rect class="heat__cell q2" x="501" y="250" width="34" height="34" rx="4" data-tip="2022 年 · 機械学習・生成 AI：2 件" tabindex="0" aria-label="2022 年 機械学習・生成 AI 2 件"></rect>
-<rect class="heat__cell q2" x="538" y="250" width="34" height="34" rx="4" data-tip="2023 年 · 機械学習・生成 AI：2 件" tabindex="0" aria-label="2023 年 機械学習・生成 AI 2 件"></rect>
-<rect class="heat__cell q1" x="575" y="250" width="34" height="34" rx="4" data-tip="2024 年 · 機械学習・生成 AI：1 件" tabindex="0" aria-label="2024 年 機械学習・生成 AI 1 件"></rect>
-<rect class="heat__cell q2" x="612" y="250" width="34" height="34" rx="4" data-tip="2025 年 · 機械学習・生成 AI：2 件" tabindex="0" aria-label="2025 年 機械学習・生成 AI 2 件"></rect>
-<rect class="heat__cell q4" x="649" y="250" width="34" height="34" rx="4" data-tip="2026 年 · 機械学習・生成 AI：5 件" tabindex="0" aria-label="2026 年 機械学習・生成 AI 5 件"></rect>
+<rect class="heat__cell q0" x="168" y="250" width="34" height="34" rx="4" data-tip="2013 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="250" width="34" height="34" rx="4" data-tip="2014 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="250" width="34" height="34" rx="4" data-tip="2015 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="250" width="34" height="34" rx="4" data-tip="2016 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q1" x="316" y="250" width="34" height="34" rx="4" data-tip="2017 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q0" x="353" y="250" width="34" height="34" rx="4" data-tip="2018 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q1" x="390" y="250" width="34" height="34" rx="4" data-tip="2019 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q1" x="427" y="250" width="34" height="34" rx="4" data-tip="2020 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q0" x="464" y="250" width="34" height="34" rx="4" data-tip="2021 年 · 機械学習・生成 AI：0 件"></rect>
+<rect class="heat__cell q2" x="501" y="250" width="34" height="34" rx="4" data-tip="2022 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q2" x="538" y="250" width="34" height="34" rx="4" data-tip="2023 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q1" x="575" y="250" width="34" height="34" rx="4" data-tip="2024 年 · 機械学習・生成 AI：1 件"></rect>
+<rect class="heat__cell q2" x="612" y="250" width="34" height="34" rx="4" data-tip="2025 年 · 機械学習・生成 AI：2 件"></rect>
+<rect class="heat__cell q4" x="649" y="250" width="34" height="34" rx="4" data-tip="2026 年 · 機械学習・生成 AI：5 件"></rect>
 <text class="heat__label" x="156" y="308.0" text-anchor="end">IoT・ものづくり</text>
-<rect class="heat__cell q0" x="168" y="287" width="34" height="34" rx="4" data-tip="2013 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2013 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="287" width="34" height="34" rx="4" data-tip="2014 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2014 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q1" x="242" y="287" width="34" height="34" rx="4" data-tip="2015 年 · IoT・ものづくり：1 件" tabindex="0" aria-label="2015 年 IoT・ものづくり 1 件"></rect>
-<rect class="heat__cell q0" x="279" y="287" width="34" height="34" rx="4" data-tip="2016 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2016 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="316" y="287" width="34" height="34" rx="4" data-tip="2017 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2017 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="353" y="287" width="34" height="34" rx="4" data-tip="2018 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2018 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="390" y="287" width="34" height="34" rx="4" data-tip="2019 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2019 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="427" y="287" width="34" height="34" rx="4" data-tip="2020 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2020 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q5" x="464" y="287" width="34" height="34" rx="4" data-tip="2021 年 · IoT・ものづくり：13 件" tabindex="0" aria-label="2021 年 IoT・ものづくり 13 件"></rect>
-<rect class="heat__cell q2" x="501" y="287" width="34" height="34" rx="4" data-tip="2022 年 · IoT・ものづくり：2 件" tabindex="0" aria-label="2022 年 IoT・ものづくり 2 件"></rect>
-<rect class="heat__cell q0" x="538" y="287" width="34" height="34" rx="4" data-tip="2023 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2023 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="575" y="287" width="34" height="34" rx="4" data-tip="2024 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2024 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="612" y="287" width="34" height="34" rx="4" data-tip="2025 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2025 年 IoT・ものづくり 0 件"></rect>
-<rect class="heat__cell q0" x="649" y="287" width="34" height="34" rx="4" data-tip="2026 年 · IoT・ものづくり：0 件" tabindex="0" aria-label="2026 年 IoT・ものづくり 0 件"></rect>
+<rect class="heat__cell q0" x="168" y="287" width="34" height="34" rx="4" data-tip="2013 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="287" width="34" height="34" rx="4" data-tip="2014 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q1" x="242" y="287" width="34" height="34" rx="4" data-tip="2015 年 · IoT・ものづくり：1 件"></rect>
+<rect class="heat__cell q0" x="279" y="287" width="34" height="34" rx="4" data-tip="2016 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="287" width="34" height="34" rx="4" data-tip="2017 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="353" y="287" width="34" height="34" rx="4" data-tip="2018 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="390" y="287" width="34" height="34" rx="4" data-tip="2019 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="427" y="287" width="34" height="34" rx="4" data-tip="2020 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q5" x="464" y="287" width="34" height="34" rx="4" data-tip="2021 年 · IoT・ものづくり：13 件"></rect>
+<rect class="heat__cell q2" x="501" y="287" width="34" height="34" rx="4" data-tip="2022 年 · IoT・ものづくり：2 件"></rect>
+<rect class="heat__cell q0" x="538" y="287" width="34" height="34" rx="4" data-tip="2023 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="287" width="34" height="34" rx="4" data-tip="2024 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="287" width="34" height="34" rx="4" data-tip="2025 年 · IoT・ものづくり：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="287" width="34" height="34" rx="4" data-tip="2026 年 · IoT・ものづくり：0 件"></rect>
 <text class="heat__label" x="156" y="345.0" text-anchor="end">アジャイル・発信</text>
-<rect class="heat__cell q0" x="168" y="324" width="34" height="34" rx="4" data-tip="2013 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2013 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="205" y="324" width="34" height="34" rx="4" data-tip="2014 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2014 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="242" y="324" width="34" height="34" rx="4" data-tip="2015 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2015 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="279" y="324" width="34" height="34" rx="4" data-tip="2016 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2016 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="316" y="324" width="34" height="34" rx="4" data-tip="2017 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2017 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q1" x="353" y="324" width="34" height="34" rx="4" data-tip="2018 年 · アジャイル・発信：1 件" tabindex="0" aria-label="2018 年 アジャイル・発信 1 件"></rect>
-<rect class="heat__cell q0" x="390" y="324" width="34" height="34" rx="4" data-tip="2019 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2019 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q1" x="427" y="324" width="34" height="34" rx="4" data-tip="2020 年 · アジャイル・発信：1 件" tabindex="0" aria-label="2020 年 アジャイル・発信 1 件"></rect>
-<rect class="heat__cell q1" x="464" y="324" width="34" height="34" rx="4" data-tip="2021 年 · アジャイル・発信：1 件" tabindex="0" aria-label="2021 年 アジャイル・発信 1 件"></rect>
-<rect class="heat__cell q3" x="501" y="324" width="34" height="34" rx="4" data-tip="2022 年 · アジャイル・発信：4 件" tabindex="0" aria-label="2022 年 アジャイル・発信 4 件"></rect>
-<rect class="heat__cell q0" x="538" y="324" width="34" height="34" rx="4" data-tip="2023 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2023 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="575" y="324" width="34" height="34" rx="4" data-tip="2024 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2024 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="612" y="324" width="34" height="34" rx="4" data-tip="2025 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2025 年 アジャイル・発信 0 件"></rect>
-<rect class="heat__cell q0" x="649" y="324" width="34" height="34" rx="4" data-tip="2026 年 · アジャイル・発信：0 件" tabindex="0" aria-label="2026 年 アジャイル・発信 0 件"></rect>
+<rect class="heat__cell q0" x="168" y="324" width="34" height="34" rx="4" data-tip="2013 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="205" y="324" width="34" height="34" rx="4" data-tip="2014 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="242" y="324" width="34" height="34" rx="4" data-tip="2015 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="279" y="324" width="34" height="34" rx="4" data-tip="2016 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="316" y="324" width="34" height="34" rx="4" data-tip="2017 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q1" x="353" y="324" width="34" height="34" rx="4" data-tip="2018 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q0" x="390" y="324" width="34" height="34" rx="4" data-tip="2019 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q1" x="427" y="324" width="34" height="34" rx="4" data-tip="2020 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q1" x="464" y="324" width="34" height="34" rx="4" data-tip="2021 年 · アジャイル・発信：1 件"></rect>
+<rect class="heat__cell q3" x="501" y="324" width="34" height="34" rx="4" data-tip="2022 年 · アジャイル・発信：4 件"></rect>
+<rect class="heat__cell q0" x="538" y="324" width="34" height="34" rx="4" data-tip="2023 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="575" y="324" width="34" height="34" rx="4" data-tip="2024 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="612" y="324" width="34" height="34" rx="4" data-tip="2025 年 · アジャイル・発信：0 件"></rect>
+<rect class="heat__cell q0" x="649" y="324" width="34" height="34" rx="4" data-tip="2026 年 · アジャイル・発信：0 件"></rect>
 </svg></div>
         <figcaption>
           <ul class="heat__legend" aria-label="凡例（リポジトリ数）"><li><span class="heat__swatch q0"></span>0</li><li><span class="heat__swatch q1"></span>1</li><li><span class="heat__swatch q2"></span>2</li><li><span class="heat__swatch q3"></span>3–4</li><li><span class="heat__swatch q4"></span>5–7</li><li><span class="heat__swatch q5"></span>8+</li></ul>

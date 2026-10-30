@@ -131,7 +131,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .heat__label { fill: var(--text-2); font-size: 13px; font-family: var(--sans); }
 .heat__year { fill: var(--muted); font-size: 12px; font-family: var(--mono); }
 .heat__cell { stroke: var(--panel); stroke-width: 2; transition: stroke .12s; cursor: default; }
-.heat__cell:hover, .heat__cell:focus { stroke: var(--text); outline: none; }
+.heat__cell:hover { stroke: var(--text); }
 .q0 { fill: var(--q0); background: var(--q0); } .q1 { fill: var(--q1); background: var(--q1); }
 .q2 { fill: var(--q2); background: var(--q2); } .q3 { fill: var(--q3); background: var(--q3); }
 .q4 { fill: var(--q4); background: var(--q4); } .q5 { fill: var(--q5); background: var(--q5); }
@@ -259,5 +259,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
 @media print {
   .topbar, .theme-toggle, .tooltip { display: none; }
+  /* 印刷では背景が出ないので、グラデーションの文字を普通の色に戻す */
+  .hero__title { background: none; color: #000; }
   .js .reveal { opacity: 1; transform: none; }
 }

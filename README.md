@@ -10,7 +10,7 @@
 
 _**You've wandered into this strange page, and you my need help?**_
 
-📜 [自分と技術の歩み](https://otajisan.github.io/history/) — これまでのリポジトリと Qiita の記事から、時期ごとに取り組んできた技術をまとめたページ
+📜 [自分と技術の歩み](https://otajisan.github.io/history/) — これまでのリポジトリと Qiita・Zenn の記事から、時期ごとに取り組んできた技術をまとめたページ
 
 [![welcome](assets/img/otajisan-welcome-clear-large.gif)](https://github.com/otajisan)
 

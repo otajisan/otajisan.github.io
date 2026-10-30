@@ -15,7 +15,7 @@ GitHub のプロフィール（https://github.com/otajisan）に表示される 
 ```
 history/
 ├── index.html  # ページ本体（静的 HTML）
-├── main.js     # テーマ切り替え・フェードイン・ヒートマップのツールチップ
+├── main.js     # テーマ切り替え・フェードイン・チャートのツールチップ
 └── style.css
 .githooks/      # otajisan 以外のコミット・push を止めるフック
 ```

@@ -1,4 +1,4 @@
-// 「自分と技術の歩み」 — テーマの切り替え・スクロールでのフェードイン・ヒートマップのツールチップ
+// 「自分と技術の歩み」 — テーマの切り替え・スクロールでのフェードイン・チャートのツールチップ
 (() => {
   // index.html の <head> にある予備の処理に、このファイルが読み込めたことを伝える
   window.__historyReady = true;
@@ -38,29 +38,33 @@
     items.forEach((el) => io.observe(el));
   }
 
-  // ヒートマップのツールチップ（マウス用。キーボードや読み上げでは「表で見る」を使う）
-  const figure = document.querySelector(".heat-figure");
-  const tip = figure && figure.querySelector(".tooltip");
-  if (!tip) return;
+  // ヒートマップと言語チャートのツールチップ（マウス用。キーボードや読み上げでは「表で見る」を使う）
   const EDGE = 8;
-  const show = (cell) => {
-    tip.textContent = cell.dataset.tip;
-    tip.hidden = false;
-    const box = cell.getBoundingClientRect();
-    const base = figure.getBoundingClientRect();
-    // 枠の外にはみ出さないよう、ツールチップの中心を枠の内側に収める
-    const half = tip.offsetWidth / 2;
-    const center = box.left - base.left + box.width / 2;
-    const left = Math.min(Math.max(center, half + EDGE), base.width - half - EDGE);
-    tip.style.left = `${left}px`;
-    tip.style.top = `${box.top - base.top}px`;
-  };
-  const hide = () => { tip.hidden = true; };
-  figure.querySelectorAll(".heat__cell").forEach((cell) => {
-    cell.addEventListener("mouseenter", () => show(cell));
-    cell.addEventListener("mouseleave", hide);
+  const tips = [];
+  document.querySelectorAll(".heat-figure").forEach((figure) => {
+    const tip = figure.querySelector(".tooltip");
+    if (!tip) return;
+    tips.push(tip);
+    const show = (cell) => {
+      tip.textContent = cell.dataset.tip;
+      tip.hidden = false;
+      const box = cell.getBoundingClientRect();
+      const base = figure.getBoundingClientRect();
+      // 枠の外にはみ出さないよう、ツールチップの中心を枠の内側に収める
+      const half = tip.offsetWidth / 2;
+      const center = box.left - base.left + box.width / 2;
+      const left = Math.min(Math.max(center, half + EDGE), base.width - half - EDGE);
+      tip.style.left = `${left}px`;
+      tip.style.top = `${box.top - base.top}px`;
+    };
+    const hide = () => { tip.hidden = true; };
+    figure.querySelectorAll("[data-tip]").forEach((cell) => {
+      cell.addEventListener("mouseenter", () => show(cell));
+      cell.addEventListener("mouseleave", hide);
+    });
+    // スクロールすると位置がずれるので、いったん隠す
+    const scroller = figure.querySelector(".heat-scroll");
+    if (scroller) scroller.addEventListener("scroll", hide, { passive: true });
   });
-  // スクロールすると位置がずれるので、いったん隠す
-  figure.querySelector(".heat-scroll").addEventListener("scroll", hide, { passive: true });
-  window.addEventListener("scroll", hide, { passive: true });
+  window.addEventListener("scroll", () => tips.forEach((tip) => { tip.hidden = true; }), { passive: true });
 })();

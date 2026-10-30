@@ -117,6 +117,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .langs__label { color: var(--muted); font-size: 13px; }
 .langs ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .langs li { font-family: var(--mono); font-size: 13px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--text-2); }
+.langs__more { color: var(--muted); font-size: 13px; text-decoration: none; }
+.langs__more:hover { color: var(--brand-2); }
 
 /* 見出し */
 .section-title { display: flex; align-items: baseline; gap: 14px; margin: 0 0 8px; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.01em; }
@@ -140,6 +142,20 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .heat__legend li { display: inline-flex; align-items: center; gap: 6px; }
 .heat__legend li:first-child::before { content: "件数"; font-family: var(--sans); margin-right: 4px; }
 .heat__swatch { width: 14px; height: 14px; border-radius: 4px; border: 1px solid var(--line); }
+/* 言語の移り変わり: 円の面積がその年に手を入れたリポジトリの数 */
+.sub-title { margin: 40px 0 8px; font-size: 20px; letter-spacing: -.01em; scroll-margin-top: 72px; }
+.lang-chart { display: block; width: 100%; min-width: 680px; height: auto; }
+.lang-chart__grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; }
+.lang-chart__span { stroke: color-mix(in srgb, var(--brand-2) 45%, var(--line)); stroke-width: 2; stroke-linecap: round; }
+.lang-chart__hit { fill: transparent; }
+.lang-chart__bubble { fill: color-mix(in srgb, var(--brand-2) 78%, transparent); stroke: var(--panel); stroke-width: 2; transition: stroke .12s; }
+.lang-chart__dot { cursor: default; }
+.lang-chart__dot:hover .lang-chart__bubble { stroke: var(--text); }
+.lang-chart__label { font-family: var(--mono); }
+.lang-chart__total { fill: var(--text-2); font-size: 13px; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.lang-legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; justify-content: flex-end; align-items: center; color: var(--muted); font-size: 12px; font-family: var(--mono); }
+.lang-legend li { display: inline-flex; align-items: center; gap: 4px; }
+.lang-legend li:first-child::before { content: "リポジトリ数"; font-family: var(--sans); margin-right: 4px; }
 .tooltip {
   position: absolute; z-index: 5; pointer-events: none; transform: translate(-50%, calc(-100% - 10px));
   padding: 6px 10px; border-radius: 8px; background: var(--text); color: var(--bg);
@@ -242,7 +258,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .caret { animation: none; }
-  .toc a, .card, .heat__cell { transition: none; }
+  .toc a, .card, .heat__cell, .lang-chart__bubble { transition: none; }
 }
 
 @media (max-width: 760px) {

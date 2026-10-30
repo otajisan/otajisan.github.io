@@ -246,7 +246,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 }
 
 /* 数字が 5 つなので、中くらいの幅では 3 + 2 の 2 段に組む */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .stat { grid-column: span 2; }
   .stat:nth-child(n+4) { grid-column: span 3; }

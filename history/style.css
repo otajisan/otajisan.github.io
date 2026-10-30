@@ -104,7 +104,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 }
 .hero__lead { max-width: 640px; margin: 24px 0 0; color: var(--text-2); font-size: 17px; }
 
-.stats { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.stats { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .stat {
   padding: 18px 16px; border: 1px solid var(--line); border-radius: 14px;
   background: linear-gradient(180deg, var(--panel), var(--bg-2)); box-shadow: var(--shadow);
@@ -245,20 +245,11 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   .toc a, .card, .heat__cell { transition: none; }
 }
 
-/* 数字が 5 つなので、中くらいの幅では 3 + 2 の 2 段に組む */
-@media (max-width: 1100px) {
-  .stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .stat { grid-column: span 2; }
-  .stat:nth-child(n+4) { grid-column: span 3; }
-}
-
 @media (max-width: 760px) {
   body { font-size: 15px; }
   main { padding: 0 16px; }
   .hero { padding: 72px 0 48px; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .stat, .stat:nth-child(n+4) { grid-column: auto; }
-  .stat:first-child { grid-column: span 2; }
   .stat { padding: 14px 14px; }
   .stat__num { font-size: 26px; }
   .stat__num small { font-size: 12px; }
